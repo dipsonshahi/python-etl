@@ -7,7 +7,7 @@
     "DATABASE" : "",
     "EXPORT_PATH" : "/Users/dipson/Desktop/DataManagement/PYTHON/DATASOURCE/",
     "DOWNLOAD_PATH" : "/Users/dipson/Desktop/DataManagement/PYTHON/DOWNLOAD/",
-    "ORDERS_DOWNLOAD_URL" : "https://github.com/dipsonshahi/python-etl/blob/master/order-sample.rar"
+    "ORDERS_DOWNLOAD_URL" : "https://srv-file16.gofile.io/download/IZyTIL/order-sample.zip"
   },
   "DEVELOPMENT" : {
     "USER" : "",
@@ -17,7 +17,7 @@
     "DATABASE" : "",
     "EXPORT_PATH" : "/Users/dipson/Desktop/DataManagement/PYTHON/DATASOURCE/",
     "DOWNLOAD_PATH" : "/Users/dipson/Desktop/DataManagement/PYTHON/DOWNLOAD/",
-    "ORDERS_DOWNLOAD_URL" : "https://github.com/dipsonshahi/python-etl/blob/master/order-sample.rar"
+    "ORDERS_DOWNLOAD_URL" : "https://srv-file16.gofile.io/download/IZyTIL/order-sample.zip"
   },
   "LOCAL" : {
     "USER" : "",
@@ -27,6 +27,6 @@
     "DATABASE" : "",
     "EXPORT_PATH" : "/Users/dipson/Desktop/DataManagement/PYTHON/DATASOURCE",
     "DOWNLOAD_PATH" : "/Users/dipson/Desktop/DataManagement/PYTHON/DOWNLOAD/",
-    "ORDERS_DOWNLOAD_URL" : "https://github.com/dipsonshahi/python-etl/blob/master/order-sample.rar"
+    "ORDERS_DOWNLOAD_URL" : "https://srv-file16.gofile.io/download/IZyTIL/order-sample.zip"
   }
 }

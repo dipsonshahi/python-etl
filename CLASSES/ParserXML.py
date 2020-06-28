@@ -51,7 +51,7 @@ class ParserXML():
             DateInsert = str(datetime.now())
 
             # Create a dictionary with the values
-            dictionary = {  "from_date": start_date, 
+            dictionary = {  "start_date": start_date, 
                             "end_date": end_date, 
                             "page": page, 
                             "DateInsert": DateInsert
@@ -97,7 +97,7 @@ class ParserXML():
                     price = node_2.find('price')
                     units = node_2.find('units')
     
-                    self.list_pedidos_detalles.append({ "order_id": order_id, 
+                    self.list_order_details.append({ "order_id": order_id, 
                                                         "client_id" : getValue(client_id), 
                                                         "client" : getValue(client), 
                                                         "date" : getValue(date), 
@@ -128,13 +128,12 @@ class ParserXML():
             sql_insert = """ insert into headers ( page, start_date, end_date, DateInsert ) 
                             values ( %s, %s, %s, %s ) """
                             
-            params_array = (    self.list_header[0]["page"], 
-                                self.list_header[0]["start_date"], 
-                                self.list_header[0]["end_date"], 
-                                self.list_header[0]["DateInsert"]
+            params_array = (    self.list_headers[0]["page"], 
+                                self.list_headers[0]["start_date"], 
+                                self.list_headers[0]["end_date"], 
+                                self.list_headers[0]["DateInsert"]
                             )
             
-            print(params_array)
             
             self.connection.execQuery( Query_params = sql_insert, params = params_array )
         

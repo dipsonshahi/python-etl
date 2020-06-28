@@ -47,10 +47,10 @@ logTraceability.iniStatusActivity( FILE = "N/A"
                                   , DESCRIPTION = "DOWNLOAD & UNRAR"
                                   , DATE = process_date
                                   ,  STATUS = 0 )
-fileManagement.downloadOrdersRarURL( ORDERS_DOWNLOAD_URL = config[ENVIRONMENT]['ORDERS_DOWNLOAD_URL']
+fileManagement.downloadOrdersZipURL( ORDERS_DOWNLOAD_URL = config[ENVIRONMENT]['ORDERS_DOWNLOAD_URL']
                                         , DOWNLOAD_PATH = config[ENVIRONMENT]['DOWNLOAD_PATH'] )
 
-fileManagement.unRarFileExport( DOWNLOAD_PATH = config[ENVIRONMENT]['DOWNLOAD_PATH']
+fileManagement.unZipFileExport( DOWNLOAD_PATH = config[ENVIRONMENT]['DOWNLOAD_PATH']
                                     , EXPORT_PATH = config[ENVIRONMENT]['EXPORT_PATH'] )
 
 logTraceability.updateStatusActivity( FILE = "N/A"
@@ -80,8 +80,8 @@ for inputFile in files_xml:
         parserXML.parseXML( FILE, INPUT_PATH )
         parserXML.insertRowsToDB( connection )
         
-    except:
-        
+    except Exception as e:
+        print(str(e))
         logTraceability.updateStatusActivity( FILE = FILE
                                              , DESCRIPTION = "ParserXML"
                                              ,  DATE = activity_date

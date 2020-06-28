@@ -1,18 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-pip install pyunpack
-pip install patool
-
-# use this for macos
-pip install rarfile
-brew install unrar
-
 @author: Dipson Shahi
 """
 import os
 import urllib.request
-from pyunpack import Archive
-from rarfile import RarFile
+import zipfile
 
 class FileManagement():
     
@@ -49,30 +41,29 @@ class FileManagement():
         if ( not os.path.exists( PATH ) ):
             os.makedirs( PATH )
 
-    def downloadOrdersRarURL(self, ORDERS_DOWNLOAD_URL, DOWNLOAD_PATH ):
+    def downloadOrdersZipURL(self, ORDERS_DOWNLOAD_URL, DOWNLOAD_PATH ):
         print('Beginning file download with urllib2...')
         
         self.create_output_path_if_not_exists(DOWNLOAD_PATH)
 
         urllib.request.urlretrieve( ORDERS_DOWNLOAD_URL, DOWNLOAD_PATH + self.DOWNLOADED_FILE_NAME )
 
-    def unRarFileExport(self, DOWNLOAD_PATH, EXPORT_PATH ):
+    def unZipFileExport(self, DOWNLOAD_PATH, EXPORT_PATH ):
         
         self.create_output_path_if_not_exists(EXPORT_PATH)
         
-        """Archive( DOWNLOAD_PATH + self.DOWNLOADED_FILE_NAME ).extractall( EXPORT_PATH )"""
-        with RarFile( DOWNLOAD_PATH + self.DOWNLOADED_FILE_NAME ) as rf:
-            rf.extractall( EXPORT_PATH )
+        with zipfile.ZipFile( DOWNLOAD_PATH + self.DOWNLOADED_FILE_NAME, "r" ) as zip_ref:
+            zip_ref.extractall( EXPORT_PATH )
         
         
 
 """
-ORDERS_DOWNLOAD_URL = "https://github.com/dipsonshahi/python-etl/blob/master/order-sample.rar"
+ORDERS_DOWNLOAD_URL = "https://github.com/dipsonshahi/python-etl/blob/master/order-sample.zip"
 DOWNLOAD_PATH = "/Users/dipson/Desktop/DataManagement/PYTHON/DOWNLOAD/"
 EXPORT_PATH = "/Users/dipson/Desktop/DataManagement/PYTHON/DATASOURCE/"
 fileManagement = FileManagement()
-fileManagement.downloadOrdersRarURL( ORDERS_DOWNLOAD_URL, DOWNLOAD_PATH )
-fileManagement.unRarFileExport( DOWNLOAD_PATH, EXPORT_PATH )
+fileManagement.downloadOrdersZipURL( ORDERS_DOWNLOAD_URL, DOWNLOAD_PATH )
+fileManagement.unZipFileExport( DOWNLOAD_PATH, EXPORT_PATH )
 
 """
                 

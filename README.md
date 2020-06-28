@@ -34,7 +34,7 @@ create table order_details (
 id integer,
 client_id integer,
 client varchar (100),
-date date,
+date timestamp,
 discount_price float,
 DateInsert timestamp,
 product_id integer,
