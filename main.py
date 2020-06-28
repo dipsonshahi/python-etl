@@ -18,7 +18,7 @@ ENVIRONMENT = "PRODUCTION"      #PRODUCTION | DEVELOPMENT | TEST | LOCAL
 
 
 # Get access variables
-with open('/Users/dipson/Downloads/python_parserXML/config.json', 'r') as file:
+with open('/Users/dipson/Deepspace/python-etl/config.json', 'r') as file:
     config = json.load(file)
 
 connection = Connection( USER = config[ENVIRONMENT]['USER']
