@@ -1,27 +1,22 @@
 # PYTHON-ETL
 
 1. To run the script you need to have Python 3.6 or 3.7 installed
-2. Install the following Python libraries
-- pip install pyunpack
-- pip install patool
 
-(For MacOS)
-- pip install rarfile
-- brew install unrar
-
-3. Modify the paths of the config.json file
+2. Modify the paths of the config.json file
+- ORDERS_DOWNLOAD_URL: The downloadable URL of the zip file to be processed
 - DOWNLOAD_PATH: Here you will download · the Zip from the web
 - EXPORT_PATH: Here unzip the content of the ZIP and then process the data
 
-4. Create the tables in Postgres:
-create table headers (
+3. Create the tables in Postgres:
+```
+CREATE TABLE headers (
 page varchar(100), 
 start_date date,
 end_date date,
 DateInsert timestamp
 );
 
-create table orders (
+CREATE TABLE orders (
 id integer,
 client_id integer,
 client varchar (100),
@@ -30,7 +25,7 @@ discount_price float,
 DateInsert timestamp
 );
 
-create table order_details (
+CREATE TABLE order_details (
 id integer,
 client_id integer,
 client varchar (100),
@@ -53,6 +48,6 @@ start_date timestamp,
 end_date timestamp,
 cant_row integer
 );
+```
 
-
-5. YOU ARE READY TO RUN
+4. YOU ARE READY TO RUN
