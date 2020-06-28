@@ -1,0 +1,32 @@
+{
+  "PRODUCTION" : {
+    "USER" : "",
+    "PASS" : "",
+    "HOST" : "localhost",
+    "PORT" : "5432",
+    "DATABASE" : "",
+    "EXPORT_PATH" : "/Users/dipson/Desktop/DataManagement/PYTHON/DATASOURCE/",
+    "DOWNLOAD_PATH" : "/Users/dipson/Desktop/DataManagement/PYTHON/DOWNLOAD/",
+    "ORDERS_DOWNLOAD_URL" : "https://github.com/dipsonshahi/python-etl/blob/master/order-sample.rar"
+  },
+  "DEVELOPMENT" : {
+    "USER" : "",
+    "PASS" : "",
+    "HOST" : "localhost",
+    "PORT" : "5432",
+    "DATABASE" : "",
+    "EXPORT_PATH" : "/Users/dipson/Desktop/DataManagement/PYTHON/DATASOURCE/",
+    "DOWNLOAD_PATH" : "/Users/dipson/Desktop/DataManagement/PYTHON/DOWNLOAD/",
+    "ORDERS_DOWNLOAD_URL" : "https://github.com/dipsonshahi/python-etl/blob/master/order-sample.rar"
+  },
+  "LOCAL" : {
+    "USER" : "",
+    "PASS" : "",
+    "HOST" : "localhost",
+    "PORT" : "5432",
+    "DATABASE" : "",
+    "EXPORT_PATH" : "/Users/dipson/Desktop/DataManagement/PYTHON/DATASOURCE",
+    "DOWNLOAD_PATH" : "/Users/dipson/Desktop/DataManagement/PYTHON/DOWNLOAD/",
+    "ORDERS_DOWNLOAD_URL" : "https://github.com/dipsonshahi/python-etl/blob/master/order-sample.rar"
+  }
+}
